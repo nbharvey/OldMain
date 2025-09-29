@@ -6,8 +6,8 @@ type FoodCarouselProps = {
 };
 
 export default function FoodCarousel({ images }: FoodCarouselProps) {
-  // Split images into chunks of 5
-  const chunkSize = 5;
+  // Split images into chunks of 3
+  const chunkSize = 3;
   const slides = [];
   for (let i = 0; i < images.length; i += chunkSize) {
     slides.push(images.slice(i, i + chunkSize));
@@ -22,7 +22,7 @@ export default function FoodCarousel({ images }: FoodCarouselProps) {
               key={i}
               src={img}
               alt={`Food ${i}`}
-              className="h-40 md:h-48 object-cover rounded-lg shadow-md"
+              className="h-40 md:h-48 w-40 md:w-48 object-cover rounded-lg shadow-md"
             />
           ))}
         </div>

@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function MyNavbar() {
   return (
-    <Navbar fluid rounded className="bg-gray-900 text-white w-full">
+    <Navbar fluid rounded className="!bg-brandBlack text-brandSilver w-full">
       {/* Brand / Logo */}
       <NavbarBrand href="/">
-        <img src="/oldmain-example.svg" className="mr-3 h-8" alt="Old Main Logo" />
+        <img src="/SVGTranslogo.svg" className="mr-3 h-8" alt="Old Main Logo" />
         <span className="self-center whitespace-nowrap text-xl font-bold">
           Old Main Restaurant and Bar
         </span>
