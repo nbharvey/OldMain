@@ -25,11 +25,10 @@ const foodImages = [
 export default function Home() {
     return (
 <div className="bg-brandBlack">
-    <div className="flex flex-col space-y-16">
+    <div className="flex flex-col space-y-6">
       {/* Hero Carousel */}
       <HeroCarousel />
 
-      {/* About / Our Food / The Bar Sections with Brick.jpg background */}
       <div
   className="flex flex-col text-brandBlack"
   style={{
@@ -57,7 +56,7 @@ export default function Home() {
     
     <div className="mt-6">
   <Link to="/jobs">
-    <MyButton label="We are hiring!" color="brick" />
+    <MyButton label="We are hiring!"/>
   </Link>
 </div>
 
@@ -71,6 +70,12 @@ export default function Home() {
       and fresh herbs grown in the region. Every dish is crafted with care and attention to
       flavor.
     </p>
+                        
+  <div className="mt-6">
+  <Link to="/menu">
+    <MyButton label="Explore Our Menu!"/>
+  </Link>
+  </div>
   </section>
 
   {/* The Bar */}
@@ -80,7 +85,14 @@ export default function Home() {
       Upstairs features golf simulators and a “pour your own drink” wall for a fun and unique
       experience. Enjoy our carefully crafted cocktails or your favorite brews in a relaxed
       setting.
-    </p>
+   </p>
+                        
+    <div className="mt-6">
+  <Link to="/drinks">
+    <MyButton label="Explore Our Drinks!"/>
+                            </Link>
+  </div>
+                            
   </section>
 </div>
 
