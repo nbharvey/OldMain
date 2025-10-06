@@ -2,6 +2,7 @@ import {Routes, Route } from "react-router-dom";
 import MyNavbar from "./components/MyNavbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Jobs from "./pages/Jobs";
 import MyFooter from "./components/MyFooter";
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
  <main className="flex-grow">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About />} />
+        <Route path="/jobs" element={<Jobs />} />
+          
       </Routes>
 </main>
 

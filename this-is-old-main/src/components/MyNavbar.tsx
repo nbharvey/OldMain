@@ -6,7 +6,7 @@ export default function MyNavbar() {
     <Navbar fluid rounded className="!bg-brandBlack text-brandSilver w-full">
       {/* Brand / Logo */}
       <NavbarBrand href="/">
-        <img src="/SVGTranslogo.svg" className="mr-3 h-8" alt="Old Main Logo" />
+        <img src="/SVGLogoCropped.svg" className="mr-3 h-16" alt="Old Main Logo" />
         <span className="self-center whitespace-nowrap text-xl font-bold">
           Old Main Restaurant and Bar
         </span>
