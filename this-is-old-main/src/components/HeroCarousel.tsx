@@ -9,7 +9,8 @@ export default function HeroCarousel() {
         <div className="absolute inset-0 bg-brandBlack bg-opacity-40 flex items-center justify-center">
         </div>
       </div>
-
+      <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: "url('/renovations.png')" }}>
+       </div>
       <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: "url('/farm-to-table.jpg')" }}>
         <div className="absolute inset-0 bg-brandBlack bg-opacity-40 flex items-center justify-center">
           <h2 className="text-brandSilver text-4xl md:text-6xl font-bold text-center">Locally Sourced, Farm to Table</h2>

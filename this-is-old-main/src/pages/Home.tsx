@@ -88,8 +88,8 @@ export default function Home() {
    </p>
                         
     <div className="mt-6">
-  <Link to="/drinks">
-    <MyButton label="Explore Our Drinks!"/>
+  <Link to="/menu">
+    <MyButton label="Explore Our Menu!"/>
                             </Link>
   </div>
                             
@@ -106,8 +106,8 @@ export default function Home() {
 
       {/* Map */}
     {/* Map */}
-<section className="w-full py-12 text-center bg-brandSilver">
-  <h2 className="text-3xl text-brandBlack font-bold mb-4">Find Us Here</h2>
+<section className="w-full py-12 text-center bg-brandBlack">
+  <h2 className="text-3xl text-brandSilver font-bold mb-4">Find Us Here</h2>
   <div className="w-full h-[400px] md:h-[500px]">
     <OldMainMap />
   </div>

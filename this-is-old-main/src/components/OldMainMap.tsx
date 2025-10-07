@@ -4,8 +4,8 @@ import 'leaflet/dist/leaflet.css';
 
 // Custom cow icon
 const cowIcon = new L.Icon({
-  iconUrl: "/images/cow-marker.png", // replace with your cow marker image
-  iconSize: [50, 50],
+  iconUrl: "/SVGLogoCropped.svg", // replace with your cow marker imagetheoi
+  iconSize: [40, 40],
   iconAnchor: [25, 50], // bottom center
   popupAnchor: [0, -50],
 });
