@@ -1,4 +1,5 @@
- React, { useState, MouseEvent } from "react";
+import React, { useState } from "react";
+import type { MouseEvent } from "react";
 
 type MyButtonProps = {
   label: string;
@@ -54,21 +55,18 @@ export default function MyButton({ label, onClick, className }: MyButtonProps) {
       ))}
       <span className="relative">{label}</span>
 
-      <style jsx>{`
-        @keyframes ripple {
-          0% {
-            transform: scale(0);
-            opacity: 0.5;
-          }
-          100% {
-            transform: scale(2);
-            opacity: 0;
-          }
-        }
-        .animate-ripple {
-          animation: ripple 0.6s linear;
-        }
-      `}</style>
+      {ripples.map((ripple, index) => (
+  <span
+    key={index}
+    className="absolute rounded-full bg-white opacity-30 animate-ripple"
+    style={{
+      width: ripple.size,
+      height: ripple.size,
+      left: ripple.x,
+      top: ripple.y,
+    }}
+  ></span>
+))}
     </button>
   );
 }
