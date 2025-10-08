@@ -14,3 +14,11 @@
 body {
   @apply font-sans;
 }
+
+iframe {
+  scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}

@@ -1,12 +1,6 @@
 
 
 export default function Drinks() {
-  const handleAlert = () => {
-    alert(
-      `We are currently under construction. Check back soon for updates about our grand opening!\n\n` +
-      `In the meantime, looking for a job? Submit a job application today: https://localhost:5173/jobs`
-    );
-  };
 
   return (
     <section

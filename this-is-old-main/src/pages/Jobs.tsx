@@ -1,4 +1,4 @@
-export default function Jobs(): JSX.Element {
+export default function Jobs() {
   return (
     <div
       className="flex justify-center items-center min-h-screen py-12 px-6 text-brandBlack"
@@ -21,14 +21,6 @@ export default function Jobs(): JSX.Element {
         />
       </div>
 
-      <style jsx global>{`
-        iframe {
-          scrollbar-width: none !important; /* Firefox */
-        }
-        iframe::-webkit-scrollbar {
-          display: none !important; /* Chrome, Safari, Edge */
-        }
-      `}</style>
     </div>
   );
 }
