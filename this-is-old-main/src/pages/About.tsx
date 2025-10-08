@@ -3,15 +3,15 @@ import MyButton from "../components/MyButton";
 const teamMembers = [
   {
     name: "Becka Flodman",
-    role: "Head Chef",
-    bio: "Becka's bio here.",
-    image: "/team/becka.jpg",
+    role: "Executive Chef and Manager",
+    bio: "Meet Becka, our Executive Chef and General Manager. She’s been in the restaurant world since 2012, working just about every position you can think of. Becka brings a personal touch to every plate and every guest interaction, blending her love of cooking with her passion for creating memorable experiences.",
+    image: "/employees/Becka.jpeg",
   },
   {
     name: "John Smith",
     role: "Bar Manager",
-    bio: "Bio here.",
-    image: "/team/john.jpg",
+    bio: "Want your picture here? We are hiring! Head to our JOBS tab for more information.",
+    image: "/employees/hiring.jpg",
   },
 
 ];
@@ -23,7 +23,7 @@ export default function About() {
       <div className="bg-brandSilver bg-opacity-90 rounded-2xl p-10 max-w-5xl mx-auto text-center space-y-6">
         <h1 className="text-4xl font-bold text-brandBlack">About Old Main</h1>
         <p className="text-lg text-brandBlack">
-          Old Main Bar and Grill is a locally owned restaurant and bar located on Main Street in Crete, Nebraska. We focus on delivering a farm-to-table experience, sourcing fresh ingredients from local farms and purveyors.
+          Old Main Restaurant + Bar is a locally owned restaurant and bar located on Main Street in Crete, Nebraska. We focus on delivering a farm-to-table experience, sourcing fresh ingredients from local farms and purveyors.
         </p>
         <p className="text-lg text-brandBlack">
           Our kitchen specializes in locally sourced Angus beef, dry-aged meats, and herbs grown nearby. Every dish reflects our commitment to quality and flavor.
@@ -37,7 +37,7 @@ export default function About() {
 <div className="bg-brandSilver bg-opacity-90 rounded-2xl p-10 max-w-5xl mx-auto mt-12 text-center space-y-6">
   <h2 className="text-3xl font-bold text-brandBlack">Check Out Our Story</h2>
   <p className="text-lg text-brandBlack">
-    In 2024, a devastating kitchen fire temporarily shut down Old Main Restaurant and Grill. Despite the challenges, our dedicated team worked tirelessly to rebuild and reopen, bringing the community back to the heart of Crete.
+    In 2024, a devastating kitchen fire temporarily shut down Old Main Restaurant + Bar. Despite the challenges, our dedicated team worked tirelessly to rebuild and reopen, bringing the community back to the heart of Crete.
   </p>
   <p className="text-lg text-brandBlack">
     Watch the full story of our journey on KLKN News:
@@ -64,11 +64,11 @@ export default function About() {
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-brandBlack">{member.name}</h3>
-                <p className="text-brandSilver text-sm mt-2">{member.role}</p>
+                <p className="text-brandSilver text-sm mt-2 font-bold">{member.role}</p>
                 <p className="text-brandSilver text-sm mt-2">{member.bio}</p>
               </div>
             </div>

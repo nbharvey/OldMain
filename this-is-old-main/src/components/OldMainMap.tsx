@@ -21,7 +21,7 @@ export default function OldMainMap() {
       />
       <Marker position={position} icon={cowIcon}>
         <Popup>
-          Old Main Bar & Grill <br /> 1103 Main St, Crete, NE
+        Old Main Restaurant + Bar <br /> 1103 Main St, Crete, NE
         </Popup>
       </Marker>
     </MapContainer>

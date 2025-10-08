@@ -8,7 +8,7 @@ export default function MyNavbar() {
       <NavbarBrand href="/">
         <img src="/SVGLogoCropped.svg" className="mr-3 h-16" alt="Old Main Logo" />
         <span className="self-center whitespace-nowrap text-xl font-bold">
-          Old Main Restaurant and Bar
+        Old Main Restaurant + Bar
         </span>
       </NavbarBrand>
 

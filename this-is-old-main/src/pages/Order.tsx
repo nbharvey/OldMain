@@ -19,7 +19,7 @@ export default function Order() {
       <div className="max-w-4xl mx-auto bg-brandSilver bg-opacity-90 rounded-2xl p-10 text-center space-y-6">
         <h1 className="text-4xl font-bold text-brandBlack">Order at Old Main</h1>
         <p className="text-lg text-brandBlack">
-          Old Main Restaurant and Grill is opening <span className="font-semibold">December 2025</span>!  
+        Old Main Restaurant + Bar is opening <span className="font-semibold">December 2025</span>!  
           Stay tuned for updates on ordering online and in-person.
         </p>
         <p className="text-lg text-brandBlack">

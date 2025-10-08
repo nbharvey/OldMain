@@ -20,7 +20,7 @@ export default function MyFooter() {
           <div className="text-center sm:text-left">
             <FooterBrand href="/" src="/SVGLogo.svg" alt="Old Main Logo">
               <span className="!text-brandSilver font-bold text-lg">
-                Old Main Restaurant and Grill
+              Old Main Restaurant + Bar
               </span>
             </FooterBrand>
             <p className="mt-2 text-sm !text-brandSilver font-sans">
@@ -82,7 +82,7 @@ export default function MyFooter() {
                   <BsFacebook />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/oldmainrestaurantcretene/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-brandSilver hover:text-brandBrick"
@@ -101,7 +101,7 @@ export default function MyFooter() {
           <FooterCopyright
             className="!text-brandSilver"
             href="#"
-            by="Old Main Restaurant and Grill™"
+            by="Old Main Restaurant + Bar™"
             year={2025}
           />
         </div>

@@ -19,12 +19,12 @@ export default function Events() {
       <div className="max-w-4xl mx-auto bg-brandSilver bg-opacity-90 rounded-2xl p-10 text-center space-y-6">
         <h1 className="text-4xl font-bold text-brandBlack">Events at Old Main</h1>
         <p className="text-lg text-brandBlack">
-          Old Main Restaurant and Grill is opening <span className="font-semibold">December 2025</span>!  
+          Old Main Restaurant + Bar is opening <span className="font-semibold">December 2025</span>!  
           Stay tuned for updates on upcoming events, special nights, and more.
         </p>
         <p className="text-lg text-brandBlack">
-          Our bar will feature <span className="font-semibold text-brandBrick">golf simulators</span> that you can book in advance through our website for a fun, interactive experience with friends.
-        </p>
+  Our bar will feature <span className="text-brandBrick">golf simulators</span>, <span className="text-brandTeal">pool tables</span> upstairs in the bar and  <span className="text-brandBrick">wine dinners</span> every month.
+</p>
         <p className="text-lg text-brandBlack">
           Follow our progress and updates on Facebook and Instagram:
         </p>
@@ -38,7 +38,7 @@ export default function Events() {
             <BsFacebook />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/oldmainrestaurantcretene/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brandBrick hover:text-brandBlack"

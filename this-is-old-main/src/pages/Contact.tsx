@@ -34,7 +34,7 @@ export default function Contact() {
           </a>
         </div>
         <p className="text-lg text-brandBlack mt-4">
-          Email: <a href="mailto:info@oldmain.com" className="font-semibold text-brandBrick hover:text-brandBlack">manager@oldmainbarandgrill.com</a>
+          Email: <a href="mailto:info@oldmain.com" className="font-semibold text-brandBrick hover:text-brandBlack">manager@oldmain.net</a>
         </p>
         <p className="text-lg text-brandBlack">
           Phone: <span className="font-semibold text-brandBrick">(531) 739-6218</span>
