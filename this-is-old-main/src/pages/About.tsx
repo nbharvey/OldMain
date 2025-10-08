@@ -30,7 +30,7 @@ export default function About() {
         </p>
         <p className="text-lg text-brandBlack">
           Upstairs, our bar offers golf simulators and a pour-your-own drink wall. Whether you’re here for food, drinks, or events, Old Main aims to provide a fun and relaxing atmosphere.
-        </p>
+        </p> //trying to get this thing deployed!!!
       </div>
 
 {/* Our Story Card */}
