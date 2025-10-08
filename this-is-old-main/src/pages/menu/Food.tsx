@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import MyButton from "../../components/MyButton";
 
 export default function Food() {

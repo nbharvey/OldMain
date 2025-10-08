@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent } from "react";
+ React, { useState, MouseEvent } from "react";
 
 type MyButtonProps = {
   label: string;
