@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Menu() {
     return (
-      
+      <div className="bg-brandBlack">
+        
     <section className="max-w-5xl mx-auto px-6 py-12 bg-brandBlack">
       <h2 className="text-3xl font-semibold text-center mb-10 text-brandSilver">Explore Our Menu</h2>
 
@@ -41,6 +42,7 @@ export default function Menu() {
           </div>
         </Link>
       </div>
-    </section>
+        </section>
+        </div>
   );
 }
