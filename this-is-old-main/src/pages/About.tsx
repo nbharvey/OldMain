@@ -9,7 +9,7 @@ const teamMembers = [
   },
   {
     name: "John Smith",
-    role: "Bar Manager",
+    role: "",
     bio: "Want your picture here? We are hiring! Head to our JOBS tab for more information.",
     image: "/employees/hiring.jpg",
   },
