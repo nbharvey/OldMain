@@ -10,7 +10,7 @@ export default function Menu() {
       <div className="flex flex-col md:flex-row gap-8 justify-center">
         {/* Food Card */}
         <Link
-          to="/food"
+          to="/menu/food"
           className="group relative w-full md:w-1/2 cursor-pointer"
         >
           <div className="overflow-hidden rounded-2xl shadow-lg">
@@ -27,7 +27,7 @@ export default function Menu() {
 
         {/* Drinks Card */}
         <Link
-          to="/drinks"
+          to="/menu/drinks"
           className="group relative w-full md:w-1/2 cursor-pointer"
         >
           <div className="overflow-hidden rounded-2xl shadow-lg">
