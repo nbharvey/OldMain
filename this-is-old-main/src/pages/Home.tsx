@@ -39,7 +39,7 @@ export default function Home() {
 >
   {/* About Us */}
   <section className="max-w-5xl mx-auto px-4 py-10 my-4 text-center bg-brandSilver rounded-lg shadow-md">
-    <h2 className="text-3xl font-bold mb-4">Welcome to Old Main Restaurant + Bar!</h2>
+    <h2 className="text-3xl font-bold mb-4">From upscale to easygoing, Old Main Restaurant + Bar is where Crete gathers. Come for the food, stay for the feeling. </h2>
     <p className="mb-2">
       We are a locally owned restaurant and bar located on Main Street in Crete, Nebraska.
       Our vision is to provide a farm-to-table experience using local businesses and our
