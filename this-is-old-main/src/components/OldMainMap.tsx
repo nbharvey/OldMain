@@ -11,7 +11,7 @@ const cowIcon = new L.Icon({
 });
 
 export default function OldMainMap() {
-  const position: [number, number] = [40.616589208899256, -96.94783458736606]; // Old Main coordinates
+  const position: [number, number] = [40.6276, -96.9634]; // Old Main coordinates
 
   return (
       <MapContainer center={position} zoom={16} className="h-[400px] w-full">
