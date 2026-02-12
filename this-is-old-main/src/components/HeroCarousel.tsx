@@ -36,7 +36,7 @@ export default function HeroCarousel() {
 
       <div className="relative h-full bg-cover bg-center" style={{ backgroundImage: "url('/food/oldmain-front.jpg')" }}>
         <div className="absolute inset-0 bg-brandBlack bg-opacity-40 flex items-center justify-center">
-          <h2 className="text-brandSilver text-4xl md:text-6xl font-bold text-center">Opening December 2025</h2>
+          <h2 className="text-brandSilver text-4xl md:text-6xl font-bold text-center">Opening April 2026</h2>
         </div>
       </div>
     </Carousel>
