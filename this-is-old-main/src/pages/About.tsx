@@ -1,80 +1,203 @@
-import MyButton from "../components/MyButton";
-
-const teamMembers = [
-  {
-    name: "Becka Flodman",
-    role: "Executive Chef and Manager",
-    bio: "Meet Becka, our Executive Chef and General Manager. She’s been in the restaurant world since 2012, working just about every position you can think of. Becka brings a personal touch to every plate and every guest interaction, blending her love of cooking with her passion for creating memorable experiences.",
-    image: "/employees/Becka.jpeg",
-  },
-  {
-    name: "John Smith",
-    role: "",
-    bio: "Want your picture here? We are hiring! Head to our JOBS tab for more information.",
-    image: "/employees/hiring.jpg",
-  },
-
-];
+import { colors } from "../utils/colors";
 
 export default function About() {
+  const cardStyle = {
+    backgroundColor: colors.walnut_brown,
+    border: `1px solid ${colors.antique_gold}`,
+  };
+
+  const textStyle = {
+    color: colors.vintage_linen,
+  };
+
+  const mutedTextStyle = {
+    color: colors.muted_gold,
+  };
+
+  const buttonStyle = {
+    backgroundColor: colors.antique_gold,
+    color: colors.espresso_black,
+  };
+
   return (
-    <section className="relative bg-cover bg-center py-8" style={{ backgroundImage: "url('/brick.jpg')" }}>
-      {/* About overlay */}
-      <div className="bg-brandSilver bg-opacity-90 rounded-2xl p-10 max-w-5xl mx-auto text-center space-y-6">
-        <h1 className="text-4xl font-bold text-brandBlack">About Old Main</h1>
-        <p className="text-lg text-brandBlack">
-          Old Main Restaurant + Bar is a locally owned restaurant and bar located on Main Street in Crete, Nebraska. We focus on delivering a farm-to-table experience, sourcing fresh ingredients from local farms and purveyors.
-        </p>
-        <p className="text-lg text-brandBlack">
-          Our kitchen specializes in locally sourced Angus beef, dry-aged meats, and herbs grown nearby. Every dish reflects our commitment to quality and flavor.
-        </p>
-        <p className="text-lg text-brandBlack">
-          Upstairs, our bar offers golf simulators and a pour-your-own drink wall. Whether you’re here for food, drinks, or events, Old Main aims to provide a fun and relaxing atmosphere.
-        </p> 
+    <section
+      className="relative py-8 min-h-screen px-4"
+      style={{ backgroundColor: colors.espresso_black }}
+    >
+      <h1 className="text-5xl font-bold text-center mb-10" style={textStyle}>
+        About Us
+      </h1>
+
+      <div className="max-w-5xl mx-auto">
+        <img
+          src="/optimized-pics/aboutus/our-story.webp"
+          alt="Our Story at Old Main"
+          className="w-full rounded-2xl shadow-lg"
+        />
       </div>
 
-{/* Our Story Card */}
-<div className="bg-brandSilver bg-opacity-90 rounded-2xl p-10 max-w-5xl mx-auto mt-12 text-center space-y-6">
-  <h2 className="text-3xl font-bold text-brandBlack">Check Out Our Story</h2>
-  <p className="text-lg text-brandBlack">
-    In 2024, a devastating kitchen fire temporarily shut down Old Main Restaurant + Bar. Despite the challenges, our dedicated team worked tirelessly to rebuild and reopen, bringing the community back to the heart of Crete.
-  </p>
-  <p className="text-lg text-brandBlack">
-    Watch the full story of our journey on KLKN News:
-  </p>
-  <div className="mt-4">
-    <MyButton
-      label="Watch Our Story"
-      onClick={() =>
-        window.open(
-          "https://www.klkntv.com/we-had-a-mess-crete-restaurant-rebuilding-community-staple-after-kitchen-fire-in-2024/",
-          "_blank"
-        )
-      }
-    />
-  </div>
-</div>
+      <div className="max-w-5xl mx-auto mt-10">
+        <div className="rounded-2xl p-8 shadow-lg text-center" style={cardStyle}>
+          <h2 className="text-3xl font-bold mb-4" style={textStyle}>
+            Featured on KLKN News
+          </h2>
 
-      {/* Our Team Section */}
-      <div className="bg-brandSilver bg-opacity-90 rounded-2xl p-10 max-w-6xl mx-auto mt-12 text-center">
-        <h2 className="text-3xl font-bold text-brandBlack mb-8">Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {teamMembers.map((member) => (
-            <div key={member.name} className="bg-brandBlack text-brandSilver rounded-2xl overflow-hidden shadow-md">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-48 object-contain"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-brandBlack">{member.name}</h3>
-                <p className="text-brandSilver text-sm mt-2 font-bold">{member.role}</p>
-                <p className="text-brandSilver text-sm mt-2">{member.bio}</p>
-              </div>
-            </div>
-          ))}
+          <p className="leading-relaxed text-lg" style={textStyle}>
+            In 2024, a devastating kitchen fire temporarily shut down Old Main
+            Restaurant + Bar. Despite the challenges, the team worked tirelessly
+            to rebuild and reopen, bringing the community back to the heart of
+            Crete.
+          </p>
+
+          <p className="mt-4 leading-relaxed" style={mutedTextStyle}>
+            Watch the full story of Old Main’s rebuilding journey featured on
+            KLKN News.
+          </p>
+
+          <div className="mt-6">
+            <a
+              href="https://www.klkntv.com/we-had-a-mess-crete-restaurant-rebuilding-community-staple-after-kitchen-fire-in-2024/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold px-6 py-3 rounded-xl transition"
+              style={buttonStyle}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = colors.burnished_copper;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = colors.antique_gold;
+              }}
+            >
+              Watch the Story
+            </a>
+          </div>
         </div>
       </div>
+
+      <div className="max-w-6xl mx-auto mt-12">
+        <div className="rounded-2xl overflow-hidden shadow-lg" style={cardStyle}>
+          <div
+            className="px-8 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2"
+            style={{ borderBottom: `1px solid ${colors.antique_gold}` }}
+          >
+            <h2 className="text-4xl font-bold" style={textStyle}>
+              Our Chef
+            </h2>
+
+            <h4 className="text-xl font-bold" style={mutedTextStyle}>
+              Rebecca Myles — Executive Chef & General Manager
+            </h4>
+          </div>
+
+          <div className="grid grid-cols-3">
+            <div className="col-span-2">
+              <img
+                src="/optimized-pics/staff/our-chef.webp"
+                alt="Our Chef"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="col-span-1">
+              <img
+                src="/optimized-pics/staff/rebecca_myles.webp"
+                alt="Rebecca Myles"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+          </div>
+
+          <div className="px-8 py-6">
+            <p className="leading-relaxed" style={textStyle}>
+              At Old Main, our team is built on hospitality, collaboration, and
+              a shared passion for creating memorable guest experiences. From
+              the kitchen to the dining room, every team member plays an
+              important role in bringing warmth, quality, and energy to the
+              restaurant each day.
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+  {[
+    {
+      image: "staff1",
+      name: "Will Guerra",
+      title: "Front of House Manager",
+    },
+    {
+      image: "staff2",
+      name: "John Elwwod",
+      title: "Bar Lead",
+    },
+    // {
+    //   image: "staff3",
+    //   name: "Staff Name",
+    //   title: "Kitchen Staff",
+    // },
+    // {
+    //   image: "staff4",
+    //   name: "Staff Name",
+    //   title: "Host",
+    // },
+  ].map((staff) => (
+    <div
+      key={staff.image}
+      className="overflow-hidden rounded-xl"
+      style={{
+        border: `1px solid ${colors.antique_gold}`,
+        backgroundColor: colors.walnut_brown,
+      }}
+    >
+      <img
+        src={`/optimized-pics/staff/${staff.image}.webp`}
+        alt={staff.name}
+        className="w-full h-40 object-cover"
+      />
+
+      <div className="p-3 text-center">
+        <h5
+          className="text-lg font-semibold"
+          style={{ color: colors.vintage_linen }}
+        >
+          {staff.name}
+        </h5>
+
+        <p
+          className="text-sm mt-1"
+          style={{ color: colors.muted_gold }}
+        >
+          {staff.title}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+                </div>
+            
+            </div>
+          </div>
+
+          <p className="mt-3" style={textStyle}>
+  Want your picture here? Visit our{" "}
+
+  <a
+    href="/jobs"
+    className="inline-block font-semibold px-3 py-1 rounded-lg transition ml-1"
+    style={{
+      backgroundColor: colors.antique_gold,
+      color: colors.espresso_black,
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.backgroundColor = colors.burnished_copper;
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.backgroundColor = colors.antique_gold;
+    }}
+  >
+    JOBS
+  </a>
+
+  {" "}page to learn more about joining the Old Main team.
+</p>
     </section>
   );
 }

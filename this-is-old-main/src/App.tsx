@@ -10,10 +10,13 @@ import Order from "./pages/Order";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import MyFooter from "./components/MyFooter";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+            <ScrollToTop />
+
       <MyNavbar />
 
  <main className="flex-grow">

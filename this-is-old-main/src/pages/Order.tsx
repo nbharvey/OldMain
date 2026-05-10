@@ -1,44 +1,103 @@
 import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { colors } from "../utils/colors";
 
 export default function Order() {
+  const cardStyle = {
+    backgroundColor: colors.walnut_brown,
+    border: `1px solid ${colors.antique_gold}`,
+  };
+
+  const textStyle = {
+    color: colors.vintage_linen,
+  };
+
+  const mutedTextStyle = {
+    color: colors.muted_gold,
+  };
+
   return (
     <section
-      className="relative bg-cover bg-center py-12"
-      style={{ backgroundImage: "url('/brick.jpg')" }}
+      className="relative py-12 px-4 min-h-screen"
+      style={{ backgroundColor: colors.espresso_black }}
     >
+      {/* Page Title */}
+      <h1
+        className="text-5xl font-bold text-center mb-10"
+        style={textStyle}
+      >
+        Order Online
+      </h1>
+
       {/* Top Image */}
-      <div className="w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-md">
+      <div className="w-full max-w-5xl mx-auto mb-10 overflow-hidden rounded-2xl shadow-lg">
         <img
-          src="/renovations.png" 
+          src="/renovations.png"
           alt="Order at Old Main"
-          className="w-full h-64 object-cover rounded-2xl"
+          className="w-full object-cover rounded-2xl"
         />
       </div>
 
-      {/* Overlay container for text */}
-      <div className="max-w-4xl mx-auto bg-brandSilver bg-opacity-90 rounded-2xl p-10 text-center space-y-6">
-        <h1 className="text-4xl font-bold text-brandBlack">Order at Old Main</h1>
-        <p className="text-lg text-brandBlack">
-        Old Main Restaurant + Bar is opening <span className="font-semibold">December 2025</span>!  
-          Stay tuned for updates on ordering online and in-person.
-        </p>
-        <p className="text-lg text-brandBlack">
-          In the meantime, follow our progress and upcoming menu updates on Facebook and Instagram:
-        </p>
-        <div className="flex justify-center gap-6 text-2xl mt-4">
+      {/* Main Card */}
+      <div
+        className="max-w-5xl mx-auto rounded-2xl p-10 text-center shadow-lg"
+        style={cardStyle}
+      >
+        <p
+  className="text-lg leading-relaxed"
+  style={textStyle}
+>
+  Old Main Restaurant + Bar is{" "}
+  <span
+    className="font-semibold"
+    style={{ color: colors.antique_gold }}
+  >
+    OPEN
+  </span>
+  ! We are now serving guests for in-person dining.
+
+  <br />
+  <br />
+
+  Online ordering is coming soon. In the meantime, please call{" "}
+  <span
+    className="font-semibold"
+    style={{ color: colors.antique_gold }}
+  >
+    (531) 739-6218
+  </span>{" "}
+  to place a pickup order.
+</p>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-6 text-3xl mt-8">
           <a
             href="https://www.facebook.com/ombgcrete/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brandBrick hover:text-brandBlack"
+            className="transition"
+            style={{ color: colors.antique_gold }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = colors.burnished_copper;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = colors.antique_gold;
+            }}
           >
             <BsFacebook />
           </a>
+
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/oldmainrestaurantcretene/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brandBrick hover:text-brandBlack"
+            className="transition"
+            style={{ color: colors.antique_gold }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = colors.burnished_copper;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = colors.antique_gold;
+            }}
           >
             <BsInstagram />
           </a>

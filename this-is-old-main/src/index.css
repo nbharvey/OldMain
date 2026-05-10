@@ -22,3 +22,8 @@ iframe {
 iframe::-webkit-scrollbar {
   display: none;
 }
+body {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  background: #120a04;
+}
