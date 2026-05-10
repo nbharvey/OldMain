@@ -11,9 +11,7 @@ export default function Order() {
     color: colors.vintage_linen,
   };
 
-  const mutedTextStyle = {
-    color: colors.muted_gold,
-  };
+
 
   return (
     <section
