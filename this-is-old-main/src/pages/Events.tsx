@@ -2,10 +2,10 @@ import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { colors } from "../utils/colors";
 
 export default function Events() {
-  const cardStyle = {
-    backgroundColor: colors.walnut_brown,
-    border: `1px solid ${colors.antique_gold}`,
-  };
+  // const cardStyle = {
+  //   backgroundColor: colors.walnut_brown,
+  //   border: `1px solid ${colors.antique_gold}`,
+  // };
 
   const textStyle = {
     color: colors.vintage_linen,
