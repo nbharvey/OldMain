@@ -1,4 +1,4 @@
-import {Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MyNavbar from "./components/MyNavbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,38 +11,34 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import MyFooter from "./components/MyFooter";
 import ScrollToTop from "./components/ScrollToTop";
+import FineDining from "./pages/FineDining";
+import Golf from "./pages/Golf";
 
 function App() {
   return (
     <>
-            <ScrollToTop />
-
+      <ScrollToTop />
       <MyNavbar />
 
- <main className="flex-grow">
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/jobs" element={<Jobs />} />
 
-        <Route path="/jobs" element={<Jobs />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/drinks" element={<Drinks />} />
           <Route path="/menu/food" element={<Food />} />
-        
+          <Route path="/golf" element={<Golf />} />
+          <Route path="/finedining" element={<FineDining />} />
           <Route path="/order" element={<Order />} />
-        <Route path="/contact" element={<Contact />} />
-
-        
-        <Route path="/events" element={<Events />} />"
-
-          
-      </Routes>
-</main>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/events" element={<Events />} />
+        </Routes>
+      </main>
 
       <MyFooter />
     </>
-  
   );
 }
 

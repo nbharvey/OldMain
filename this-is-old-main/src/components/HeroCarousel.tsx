@@ -7,17 +7,15 @@ const slides = [
     title: "Now Open",
   },
   {
-    image: "/optimized-pics/remodel/downstairs.webp",
+    image: "/optimized-pics/remodel/fine-dining.webp",
     title: "Craft & Social",
     paragraph: "Walk-Ins Welcome",
-
   },
   {
-    image: "/optimized-pics/remodel/fine-dining.webp",
+    image:"/optimized-pics/remodel/downstairs.webp",
     title: "Fine Dining",
-    paragraph: "Call (531) 739-6218) To Reserve a Table",
-
-  },
+    paragraph: "Reserve Online",
+    link: "/finedining",  },
   {
     image: "/optimized-pics/remodel/bar-at-old-main.webp",
     title: "Craft Cocktails at Old Main",
@@ -28,14 +26,14 @@ const slides = [
   },
   {
     image: "/optimized-pics/remodel/upstairs.webp",
-    title: "A Place to Play and Relax",
-    paragraph: "Call (531) 739-6218) To Reserve a Golf Simulator",
+    title: "Pool & Golf Simulators Upstairs",
+    paragraph: "Reserve Online",
+    link: "/events",
   },
   {
     image: "/optimized-pics/food/aged-steak.webp",
     title: "Burgers and Steaks with Local Angus Beef",
   },
- 
 ];
 
 export default function HeroCarousel() {
@@ -80,40 +78,52 @@ export default function HeroCarousel() {
               backgroundImage: `url('${slide.image}')`,
             }}
           >
-{/* Dark Overlay */}
-<div
-  className="absolute inset-0 flex items-center justify-center px-6 text-center"
-  style={{
-    background:
-      "linear-gradient(to top, rgba(18,10,4,0.8), rgba(18,10,4,0.25))",
-  }}
->
-  <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
-    {slide.title && (
-      <h2
-        className="text-3xl md:text-6xl font-bold text-center"
-        style={{
-          color: colors.vintage_linen,
-          textShadow: "0px 2px 12px rgba(0,0,0,0.6)",
-        }}
-      >
-        {slide.title}
-      </h2>
-    )}
+            {/* Dark Overlay */}
+            <div
+              className="absolute inset-0 flex items-center justify-center px-6 text-center"
+              style={{
+                background:
+                  "linear-gradient(to top, rgba(18,10,4,0.8), rgba(18,10,4,0.25))",
+              }}
+            >
+              <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
+                {slide.title && (
+                  <h2
+                    className="text-3xl md:text-6xl font-bold text-center"
+                    style={{
+                      color: colors.vintage_linen,
+                      textShadow: "0px 2px 12px rgba(0,0,0,0.6)",
+                    }}
+                  >
+                    {slide.title}
+                  </h2>
+                )}
 
-    {slide.paragraph && (
-      <p
-        className="mt-4 text-xl md:text-3xl font-semibold text-center"
-        style={{
-          color: colors.vintage_linen,
-          textShadow: "0px 2px 12px rgba(0,0,0,0.6)",
-        }}
-      >
-        {slide.paragraph}
-      </p>
-    )}
-  </div>
-</div>
+                {slide.paragraph &&
+                  (slide.link ? (
+                    <a
+                      href={slide.link}
+                      className="mt-4 text-xl md:text-3xl font-semibold text-center underline transition hover:opacity-80"
+                      style={{
+                        color: colors.vintage_linen,
+                        textShadow: "0px 2px 12px rgba(0,0,0,0.6)",
+                      }}
+                    >
+                      {slide.paragraph}
+                    </a>
+                  ) : (
+                    <p
+                      className="mt-4 text-xl md:text-3xl font-semibold text-center"
+                      style={{
+                        color: colors.vintage_linen,
+                        textShadow: "0px 2px 12px rgba(0,0,0,0.6)",
+                      }}
+                    >
+                      {slide.paragraph}
+                    </p>
+                  ))}
+              </div>
+            </div>
           </div>
         ))}
       </Carousel>

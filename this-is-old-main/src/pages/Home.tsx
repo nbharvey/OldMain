@@ -104,18 +104,55 @@ export default function Home() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
-          Fine Dining Experience
-        </h3>
-        <p style={textStyle}>5:00 PM – 9:00 PM</p>
-        <p style={mutedTextStyle}>
-          Reservations required. Call (531) 739-6218 to reserve a table.
-        </p>
-      </div>
-    </div>
+      <div
+  className="mt-6 rounded-2xl p-5"
+  style={{
+    border: `2px solid ${colors.antique_gold}`,
+    backgroundColor: "rgba(18,10,4,0.45)",
+  }}
+>
+
+  <h3
+    className="text-xl font-semibold"
+    style={{ color: colors.antique_gold }}
+  >
+    Fine Dining Experience
+  </h3>
+
+  <p className="mt-2" style={textStyle}>
+    5:00 PM – 9:00 PM
+  </p>
+
+  <p className="mt-2 font-medium" style={mutedTextStyle}>
+    Reservations are recommended for fine dining only.
+  </p>
+
+  <div className="mt-4 flex justify-center">
+    <a
+      href="/finedining"
+      className="inline-block px-5 py-2 rounded-xl font-semibold transition"
+      style={{
+        backgroundColor: colors.antique_gold,
+        color: colors.espresso_black,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor =
+          colors.burnished_copper;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor =
+          colors.antique_gold;
+      }}
+    >
+      Reserve Fine Dining
+    </a>
+  </div>
+</div>
+</div>
+</div>
   </div>
 
-  <div className="mt-6">
+  {/* <div className="mt-6">
     <Link
       to="/about"
       className="inline-block font-semibold px-6 py-3 rounded-xl transition"
@@ -124,9 +161,15 @@ export default function Home() {
     >
       About Us
     </Link>
-  </div>
+  </div> */}
 </div>
+<section className="w-full py-12 px-4">
+        <h2 className="text-4xl font-bold mb-8 text-center" style={textStyle}>
+          Food & Drinks
+        </h2>
 
+        <FoodCarousel images={foodImages} />
+      </section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <section className="rounded-2xl p-8 text-center shadow-lg" style={cardStyle}>
             <h2 className="text-3xl font-bold mb-4" style={textStyle}>
@@ -174,13 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 px-4">
-        <h2 className="text-4xl font-bold mb-8 text-center" style={textStyle}>
-          Food & Drinks
-        </h2>
-
-        <FoodCarousel images={foodImages} />
-      </section>
+  
 
       <section className="w-full py-12 px-4 text-center">
         <h2 className="text-4xl font-bold mb-8" style={textStyle}>

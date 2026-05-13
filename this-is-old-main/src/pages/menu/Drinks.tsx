@@ -1,6 +1,33 @@
+import { useState } from "react";
 import { colors } from "../../utils/colors";
 
+const menus = [
+  {
+    title: "Draft Beer",
+    image: "/optimized-pics/drinks/beers.webp",
+  },
+  {
+    title: "Cocktails",
+    image: "/optimized-pics/drinks/cocktails.webp",
+  },
+  {
+    title: "Mocktails & Espresso Drinks",
+    image: "/optimized-pics/drinks/mocktails.webp",
+  },
+  {
+    title: "Wine",
+    images: [
+      "/optimized-pics/drinks/wine1.webp",
+      "/optimized-pics/drinks/wine2.webp",
+      "/optimized-pics/drinks/wine3.webp",
+    ],
+  },
+];
+
 export default function Drinks() {
+  const [selectedMenu, setSelectedMenu] =
+    useState<(typeof menus)[number] | null>(null);
+
   const cardStyle = {
     backgroundColor: colors.walnut_brown,
     border: `1px solid ${colors.antique_gold}`,
@@ -12,6 +39,11 @@ export default function Drinks() {
 
   const mutedTextStyle = {
     color: colors.muted_gold,
+  };
+
+  const buttonStyle = {
+    backgroundColor: colors.antique_gold,
+    color: colors.espresso_black,
   };
 
   return (
@@ -30,7 +62,7 @@ export default function Drinks() {
       {/* Drinks Image */}
       <div className="w-full max-w-5xl mx-auto mb-10 overflow-hidden rounded-2xl shadow-lg">
         <img
-          src="/food/pour-your-own-beer.jpg"
+          src="/optimized-pics/food/cocktail.webp"
           alt="Pour Your Own Drink Wall"
           className="w-full object-cover rounded-2xl"
         />
@@ -106,7 +138,80 @@ export default function Drinks() {
           bar or exploring the self-serve taps, the experience is yours to
           make.
         </p>
+
+        {/* Menu Buttons */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4">          {menus.map((menu) => (
+            <button
+              key={menu.title}
+              onClick={() => setSelectedMenu(menu)}
+              className="font-semibold px-5 py-3 rounded-xl transition min-w-[240px]"              style={buttonStyle}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  colors.burnished_copper;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor =
+                  colors.antique_gold;
+              }}
+            >
+              {menu.title}
+            </button>
+          ))}
+        </div>
       </div>
+
+      {/* Overlay */}
+      {selectedMenu && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6"
+          style={{ backgroundColor: "rgba(18,10,4,0.9)" }}
+          onClick={() => setSelectedMenu(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl h-[92vh] rounded-2xl p-4 md:p-6 shadow-2xl flex flex-col"
+            style={cardStyle}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedMenu(null)}
+              className="absolute top-3 right-3 z-10 px-3 py-1 rounded-lg font-bold"
+              style={buttonStyle}
+            >
+              X
+            </button>
+
+            <div className="shrink-0 pr-10">
+              <h3
+                className="text-3xl font-bold text-center mb-3"
+                style={textStyle}
+              >
+                {selectedMenu.title}
+              </h3>
+            </div>
+
+            <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-2">
+  <div className="space-y-6">
+    {selectedMenu.images ? (
+      selectedMenu.images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`${selectedMenu.title} ${index + 1}`}
+          className="block w-full rounded-xl"
+        />
+      ))
+    ) : (
+      <img
+        src={selectedMenu.image}
+        alt={selectedMenu.title}
+        className="block max-w-full max-h-full object-contain rounded-xl mx-auto"
+      />
+    )}
+  </div>
+</div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

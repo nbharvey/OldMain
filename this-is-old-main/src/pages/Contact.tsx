@@ -121,7 +121,7 @@ export default function Contact() {
               className="font-semibold"
               style={{ color: colors.antique_gold }}
             >
-              (531) 739-6218
+              (402) 418-7101
             </span>
           </p>
         </div>

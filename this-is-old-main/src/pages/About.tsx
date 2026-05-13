@@ -28,13 +28,13 @@ export default function About() {
         About Us
       </h1>
 
-      <div className="max-w-5xl mx-auto">
-        <img
-          src="/optimized-pics/aboutus/our-story.webp"
-          alt="Our Story at Old Main"
-          className="w-full rounded-2xl shadow-lg"
-        />
-      </div>
+      <div className="max-w-2xl mx-auto">
+  <img
+    src="/optimized-pics/aboutus/our-story.webp"
+    alt="Our Story at Old Main"
+    className="w-full rounded-2xl shadow-lg"
+  />
+</div>
 
       <div className="max-w-5xl mx-auto mt-10">
         <div className="rounded-2xl p-8 shadow-lg text-center" style={cardStyle}>
@@ -193,7 +193,7 @@ export default function About() {
       e.currentTarget.style.backgroundColor = colors.antique_gold;
     }}
   >
-    JOBS
+    CAREERS
   </a>
 
   {" "}page to learn more about joining the Old Main team.

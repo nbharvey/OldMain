@@ -66,7 +66,7 @@ export default function Menu() {
         >
           <div className="overflow-hidden">
             <img
-              src="/food/pour-your-own-beer.jpg"
+              src="/optimized-pics/food/cocktail.webp"
               alt="Explore our drinks menu"
               className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
