@@ -94,7 +94,7 @@ export default function Home() {
        Lunch Service
                 </h3>
                 <p style={mutedTextStyle}>Kitchen Open - Lunch Available to Order</p>
-        <p style={textStyle}>11:00 AM – 2:00 PM</p>
+        <p style={textStyle}>Tuesday - Friday: 11:00 AM – 2:00 PM</p>
         <p style={mutedTextStyle}>No reservations required.</p>
       </div>
       <div>
@@ -102,8 +102,8 @@ export default function Home() {
           Appetizers and Drinks 
                 </h3>
                 <p style={mutedTextStyle}>Kitchen Open for Appetizers Only - Drinks Always Available</p>
-                <p style={textStyle}>2:00 AM – 5:00 PM</p>
-        <p style={textStyle}>2:00 AM – 5:00 PM</p>
+                <p style={textStyle}>Tuesday - Friday: 2:00 PM – 5:00 PM</p>
+        <p style={textStyle}>Saturday: 11:00 AM – 5:00 PM and 9:00PM - 12:00AM</p>
         <p style={mutedTextStyle}>No reservations required.</p>
       </div>    
       <div>
