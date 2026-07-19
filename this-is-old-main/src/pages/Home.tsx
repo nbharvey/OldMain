@@ -93,12 +93,21 @@ export default function Home() {
       <div className="space-y-5">
       <div>
         <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
-          Kitchen Open for Meals
+          Kitchen Open for Meal Service
                 </h3>
                   <p style={textStyle}>Tuesday – Friday: 11:00 AM – 2:00 PM</p>
                 <p style={textStyle}>Tuesday – Friday: 5:00 AM – 9:00 PM</p>
         <p style={textStyle}>Saturday: 5:00 PM – 9:00 PM</p>
                 <p style={textStyle}>Sunday: 8:00 AM – 2:00 PM</p>
+                </div>
+                
+                <div>
+        <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
+          Bar Open, Kitchen Open for Appetizers Service
+                </h3>
+                  <p style={textStyle}>Tuesday – Friday: 2:00 PM - 5:00PM</p>
+                <p style={textStyle}>Tuesday – Friday: 9:00 PM - 10:00PM</p>
+        <p style={textStyle}>Saturday: 9:00 PM - 12:00AM</p>
       </div>
       {/* <div>
         <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
