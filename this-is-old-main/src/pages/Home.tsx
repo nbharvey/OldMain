@@ -82,19 +82,21 @@ export default function Home() {
       <div>
         <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
           Restaurant + Bar Hours
-        </h3>
+                </h3>
+                <p style={mutedTextStyle}>During Oeprating Hours, Drinks and Appetizers are always available </p>
+
         <p style={textStyle}>Tuesday – Friday: 11:00 AM – 10:00 PM</p>
-        <p style={textStyle}>Saturday: 11:00 AM – 12:00 AM</p>
+        <p style={textStyle}>Saturday: 5:00 PM – 12:00 AM</p>
                 <p style={textStyle}>Sunday: 8:00 AM – 2:00 PM</p>
                 
       </div>
       
-      <div>
+      {/* <div>
         <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
        Lunch Service
                 </h3>
                 <p style={mutedTextStyle}>Kitchen Open - Lunch Available to Order</p>
-        <p style={textStyle}>Tuesday - Friday: 11:00 AM – 2:00 PM</p>
+        <p style={textStyle}>Tuesday - Friday: 5:00PM - 9:00PM</p>
         <p style={mutedTextStyle}>No reservations required.</p>
       </div>
       <div>
@@ -105,13 +107,13 @@ export default function Home() {
                 <p style={textStyle}>Tuesday - Friday: 2:00 PM – 5:00 PM</p>
         <p style={textStyle}>Saturday: 11:00 AM – 5:00 PM and 9:00PM - 12:00AM</p>
         <p style={mutedTextStyle}>No reservations required.</p>
-      </div>    
+      </div>     */}
       <div>
         <h3 className="text-xl font-semibold" style={{ color: colors.antique_gold }}>
           Dinner Service
                 </h3>
                 <p style={mutedTextStyle}>Kitchen Open - Dinner Available to Order</p>
-        <p style={textStyle}>11:00 AM – 2:00 PM</p>
+        <p style={textStyle}>Tuesday - Saturday: 5:00 PM – 9:00 PM</p>
         <p style={mutedTextStyle}>No reservations required.</p>
       </div>
 
